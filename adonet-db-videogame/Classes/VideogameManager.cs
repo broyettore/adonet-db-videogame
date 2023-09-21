@@ -83,7 +83,7 @@ namespace adonet_db_videogame.Classes
             {
                 connection.Open();
 
-                string query = "SELECT id, name, overview, releae_date FROM videogames WHERE id=@Id;";
+                string query = "SELECT id, name, overview, release_date FROM videogames WHERE id=@Id;";
 
                 using SqlCommand cmd = new(query, connection);
                 cmd.Parameters.Add(new SqlParameter("@Id", idToFind));
